@@ -1,0 +1,196 @@
+body {
+  background-size:cover;
+  background-image: url('background.jpg');
+  /* background-color: black; */
+  background-repeat: no-repeat;
+  width: 100vw;
+  height: 100vh;
+}
+
+.welcome-first {
+  width: 1300px;
+  height: 100vh;
+  margin: 0 auto auto auto;
+  position: relative;
+  /* 최소 가로세로 수정해야함 */
+}
+
+.welcome-second {
+  /* border: 3px solid black; */
+  width: 1300px;
+  height: 700px;
+  margin: 90px auto auto;
+  position: absolute;
+  
+}
+
+.welcome-third {
+  display: block;
+  position: relative;
+}
+
+/* 로고 & 이름 */
+.logo-and-name {
+  border: 1px solid black;
+  height: 200px;
+  width: 1300px;
+  position: relative;
+}
+
+.logo-and-name ul {
+  display: flex;
+  margin: 0 auto;
+  justify-content: center;
+}
+
+.logo-and-name ul li{
+  display: block;
+  width: 300px;
+  height: auto;
+  position: relative;
+  padding: 15px;
+
+}
+
+.logo-and-name ul li.name {
+  display: block;
+  color: white;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 100px;
+  font-weight: bold, 700;
+  margin: 30px;
+}
+
+.logo-and-name ul li.centerline {
+  content: "";
+  width: 2px;
+  height: 80px;
+  background-color: lightgoldenrodyellow;
+  position: absolute;
+  padding: 0px;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+}
+
+.logo-and-name ul li.logo {
+  position: relative;
+  margin: 30px;
+  width: 330px;
+  height: 130px;
+  padding: 0;
+}
+
+.logo-and-name ul li.logo img {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+
+/* 미션 */
+.mission {
+  /* 보더 투명하게 하기 */
+  border: 1px solid #00ff0000;
+  height: 100px;
+  width: 1300px;
+}
+
+.mission .mission-sentence {
+  color: silver;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 28px;
+  font-weight: original, 400;
+  margin: 10px;
+  text-align: center;
+  
+}
+
+/* SNS 메뉴 작업 */
+.bottom-part {
+  border: 1px solid black;
+  height: 200px;
+}
+
+
+.bottom-part .enter-button {
+  width: 300px;
+  display: block;
+  margin : auto;
+  padding-top: 70px;
+}
+
+.bottom-part .enter-button a {
+  display: block;
+  background-color: #14F195;
+  font-size: 100%;
+  padding:30px 100px;
+  text-decoration: none;
+  color: white;
+  text-align: center;
+
+}
+
+.bottom-part .enter-button a:hover {
+  color: rgb(145, 142, 142);
+}
+
+footer {
+  display: flex;
+}
+
+footer .sns-url {
+  display: flex;
+  margin: 15px auto auto auto;
+}
+
+
+footer .sns-url li {
+  position: relative;
+}
+
+footer .sns-url li::before {
+  content: "";
+  width: 1px;
+  height: 15px;
+  background-color: lightgoldenrodyellow;
+  position:absolute;
+  /* 중앙정렬 */
+  top: 0;
+  bottom: 0;
+  margin: auto;
+}
+footer .sns-url li:first-child::before {
+  display: none;
+}
+
+footer .sns-url li a {
+  display: block;
+  font-size: 100%;
+  padding: 11px 16px;
+  margin: 0px 15px;
+  /* 색상변경해야함 */
+  color: white;
+  text-decoration: none;
+}
+
+footer .sns-url li a:hover {
+  color: rgb(145, 142, 142);
+}
+
+
+.sns-url li.blank{
+  width: 800px;
+}
+
+
+.twitter-button {
+
+}
+
+.discord-button {
+
+}
+
+.medium-button {
+
+}

@@ -1,0 +1,813 @@
+/* TO DO LIST */
+/* 
+1. 배너에 있는 버튼들을 눌렸을 때 스무스하게 이동하는 기능 추가
+
+*/
+
+/* COMMON */
+body {
+  background-color: orange;
+}
+
+img {
+  display: block;
+}
+
+a {
+  text-decoration: none;
+}
+
+/* HEADER */
+body header {
+  /* 가운데 정렬 실패 ㅠ */
+  opacity: 0.5;
+  background-color: blue;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  z-index: 1;
+}
+
+body header .inner {
+  display: flex;
+  align-items: center;
+  background-color: red;
+  height: 100px;
+  width: 1300px;
+  margin: 0 auto;
+  position: relative;
+}
+
+body header .inner a.mainlogo {
+  height: 100px;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  position: absolute;
+}
+
+body header .inner a.mainlogo img {
+  height: 100px;
+}
+
+body header .inner .nav {
+  position: absolute;
+  right: 0;
+}
+body header .inner .nav .navs{
+  display: flex;
+}
+
+body header .inner .nav .navs li{
+  position: relative;
+}
+
+
+
+body header .inner .nav .navs li::before {
+  content: "";
+  width: 1.5px;
+  height: 20px;
+  background-color: black;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+}
+
+body header .inner .nav .navs li:first-child::before {
+  display: none;
+}
+
+body header .inner .nav .navs li a{
+  display: block;
+  background-color: white;
+  padding: 11px 23px;
+  margin: 7px;
+  font-size: 30px;
+}
+
+body header .inner .nav .navs li a:hover{
+  color: pink;
+}
+
+/* VISION */
+
+body .vision {
+  background-color: yellow;
+  height: 1500px;
+  margin-top: 200px;
+
+}
+body .vision .top-inner {
+  background-color: pink;
+  width: 1300px;
+  margin: 0 auto;
+  display: flex;
+}
+
+body .vision .top-inner .top-inner-message {
+  border: 3px solid black;
+  font-size: 60px;
+  line-height: 55px;
+  font-weight: bold;
+  margin-left: 100px;
+}
+
+body .vision .top-inner .vision-logo {
+  border: 3px solid black;
+  margin: auto;
+}
+
+body .vision .top-inner .vision-logo img {
+  height: 600px;
+}
+
+body .vision .middle-inner {
+  background-color: pink;
+  width: 1300px;
+  margin: 0 auto;
+  border: 3px solid black;
+}
+
+body .vision .middle-inner .what-we-do {
+  color: white;
+  background-color: blue;
+  font-size: 48px;
+  font-weight: bold;
+
+  width: 1300px;
+  right: 0;
+  left: 0;
+  /* margin-top 100px is for <a id="vision"></a> */
+  margin: 100px auto auto auto;
+  text-align: center;
+/* animation need to be edited */
+  animation-duration: 2s;
+  animation-name: slidein;
+}
+
+@keyframes slidein {
+  from {
+    margin-left: 100%;
+    width: 300%
+  }
+
+  to {
+    margin-left: 0%;
+    width: 100%;
+  }
+}
+
+body .vision .middle-inner .what-we-do-list {
+  background-color: skyblue;
+  width: 1300px;
+  height: auto;
+  margin-bottom: 150px;
+}
+
+body .vision .middle-inner .what-we-do-list li {
+  margin: 50px 0 50px 40px;
+  color: silver;
+  background-color: blue;
+  font-size: 35px;
+  font-style: italic;
+}
+
+body .vision .middle-inner .what-we-do-list li p {
+
+}
+
+body .vision .middle-inner .what-we-do-list .what-we-do-first p{
+  animation-duration: 2.4s;
+  animation-name: slidein;
+}
+
+body .vision .middle-inner .what-we-do-list .what-we-do-second p{
+  animation-duration: 2.8s;
+  animation-name: slidein;
+}
+
+body .vision .middle-inner .what-we-do-list .what-we-do-third p{
+  animation-duration: 3.2s;
+  animation-name: slidein;
+}
+
+/* COLLECTION */
+body .collection {
+  width: 1300px;
+  height: 1200px;
+  background-color: yellowgreen;
+    /* margin-top 100px is for <a id="collection"></a> */
+  margin: 100px auto auto auto;
+}
+
+
+
+body .collection .collection-intro {
+  text-align: center;
+  font-weight: bold;
+
+}
+
+body .collection .collection-intro#overall-collection-desc {
+  font-size: 30px;
+  font-weight: normal;
+
+}
+
+
+body .collection .collection-intro p {
+  display: block;
+  font-size: 50px;
+  /* 에니매이션 수정 필요 */
+  /* animation-duration: 2s;
+  animation-name: slidein; */
+  margin: auto auto 30px auto;
+  border: 2px solid black;
+}
+
+body .collection .nft-list {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 2px solid black;
+}
+
+body .collection .nft-list .nft {
+  display: block;
+  background-color: silver;
+  width: 400px;
+  height: 600px;
+  margin: 60px;
+  border: 1px solid red;
+}
+
+
+body .collection .nft-list .nft .nft-name {
+  text-align: center;
+  padding: 10px;
+  margin: 30px;
+  border: 1px solid black;
+  font-size: 30px;
+  font-style: italic;
+}
+
+body .collection .nft-list #pratz-genesis-nft #pratz-genesis-nft-image {
+  background-image: url('blurredfirst.png');
+  border-radius: 8px;
+  background-size: contain;
+  /* position: absolute; */
+  width: 300px;
+  height: 300px;
+  right: 0;
+  left: 0;
+  top: 150px;
+  margin: auto;
+}
+
+body .collection .nft-list #coming-soon-nft #coming-soon-nft-image {
+  background-color: blue;
+  border-radius: 8px;
+  background-size: contain;
+  /* position: absolute; */
+  width: 300px;
+  height: 300px;
+  right: 0;
+  left: 0;
+  top: 150px;
+  margin: auto;
+}
+
+body .collection .nft-list #pratz-genesis-nft #pratz-genesis-nft-image img {
+  width: 300px;
+  border-radius: 8px;
+}
+
+body .collection .nft-list #coming-soon-nft #coming-soon-nft-image img {
+  width: 300px;
+  border-radius: 8px;
+}
+
+/* COLLECTION - ONLY FOR PRATZ GENESIS NFT */
+body .collection .nft-list #pratz-genesis-nft {
+  position: relative;
+}
+
+body .collection .nft-list #pratz-genesis-nft .nft-description {
+  position: absolute;
+  top: 440px;
+  background-color: pink;
+  right: 0;
+  left: 0;
+  margin: auto;
+  width: 300px;
+  text-align: center;
+  font-size: 15px;
+}
+
+body .collection .nft-list #pratz-genesis-nft #pratz-genesis-nft-image img:hover{
+  opacity: 0;
+  width:300px;
+  transition: 0.75s;
+}
+
+body .collection .nft-list #pratz-genesis-nft #pratz-genesis-nft-links {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  height: 50px;
+  top: 100px;
+}
+
+body .collection .nft-list #pratz-genesis-nft #pratz-genesis-nft-links a {
+  display: block;
+  margin: 113px 17px;
+  width: 50px;
+  height: 50px;
+  background-color: #fff;
+  border-radius: 5px;
+  align-items: center;
+}
+
+body .collection .nft-list #pratz-genesis-nft #pratz-genesis-nft-links a img{
+  display: block;
+  border-radius: 5px;
+  width: 50px;
+}
+
+body .collection .nft-list #pratz-genesis-nft #pratz-genesis-nft-links .discord-logo-image{
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+}
+/* FOR FLY TRAP */
+
+body .collection .nft-list #coming-soon-nft #coming-soon-nft-image img:hover{
+  opacity: 0;
+  width:300px;
+  transition: 0.75s;
+}
+
+body .collection .nft-list #coming-soon-nft {
+  position: relative;
+}
+
+body .collection .nft-list #coming-soon-nft #coming-soon-nft-description {
+  position: absolute;
+  top: 458px;
+  background-color: pink;
+  right: 0;
+  left: 0;
+  margin: auto;
+  width: 300px;
+  text-align: center;
+  font-size: 15px;
+}
+
+body .collection .nft-list #coming-soon-nft #coming-soon-nft-links {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  height: 50px;
+  top: 100px;
+
+
+}
+
+body .collection .nft-list #coming-soon-nft #coming-soon-nft-links a {
+  display: block;
+  margin: 113px 17px;
+  width: 50px;
+  height: 50px;
+  background-color: #fff;
+  border-radius: 5px;
+  align-items: center;
+}
+
+body .collection .nft-list #coming-soon-nft #coming-soon-nft-links a img{
+  border-radius: 5px;
+  width: 50px;
+}
+
+body .collection .nft-list #coming-soon-nft #coming-soon-nft-links .discord-logo-image{
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+}
+
+/* ROADMAP */
+/* 로드맵 - 전체 화면 / 로드맵 이너 - 1300px화면 /  */
+/* bgc or bgimage need to be added */
+body .roadmap {
+  background-color: pink;
+}
+
+body .roadmap .roadmap-inner {
+  width: 1300px;
+  height: 900px;
+  background-color: yellow;
+  border: 2px solid black;
+  margin: 100px auto auto auto;
+}
+
+body .roadmap .roadmap-inner .roadmap-intro {
+  text-align: center;
+  font-weight: bold;
+
+}
+
+body .roadmap .roadmap-inner .roadmap-intro p {
+  display: block;
+  font-size: 50px;
+  margin: auto auto 30px auto;
+  border: 2px solid black;
+}
+
+body .roadmap .roadmap-inner .roadmap-body {
+  width: 1300px;
+  height: auto;
+  border: 2px solid black;
+  background-color: skyblue;
+  position: relative;
+}
+
+body .roadmap .roadmap-inner .roadmap-body .roadmap-line{
+  background-color: red;
+}
+
+body .roadmap .roadmap-inner .roadmap-body .roadmap-line img{
+  width: 1300px;
+  background-color: rgb(72, 64, 64);
+  right: 0;
+  left: 0;
+  margin: 40px auto auto auto;
+}
+
+/* 로드맵 본체 (e.g. 2022 q1) */
+/* 2022 q1 */
+body .roadmap .roadmap-inner .roadmap-body #q1-2022 {
+  position: absolute;
+  width: 400px;
+  height: 250px;
+  border: 2px solid black;
+  top: 50px;
+  left: 150px;
+  text-align: center;
+}
+
+body .roadmap .roadmap-inner .roadmap-body #q1-2022 .roadmapdate{
+  font-size: 30px;
+  margin: 15px auto auto auto;
+  border: 2px solid black;
+}
+
+body .roadmap .roadmap-inner .roadmap-body #q1-2022 .roadmapdescription {
+  margin: 10px;
+  font-size: 20px;
+  font-style: italic;
+  line-height: 40px;
+  text-align: left;
+}
+
+/* 2022q2 */
+body .roadmap .roadmap-inner .roadmap-body #q2-2022 {
+  position: absolute;
+  width: 400px;
+  height: 250px;
+  border: 2px solid black;
+  top: 140px;
+  right: 150px;
+  text-align: center;
+}
+
+body .roadmap .roadmap-inner .roadmap-body #q2-2022 .roadmapdate{
+  font-size: 30px;
+  margin: 15px auto auto auto;
+  border: 2px solid black;
+}
+
+body .roadmap .roadmap-inner .roadmap-body #q2-2022 .roadmapdescription {
+  margin: 10px;
+  font-size: 20px;
+  font-style: italic;
+  line-height: 40px;
+  text-align: left;
+}
+
+/* 2022q3 */
+body .roadmap .roadmap-inner .roadmap-body #q3-2022 {
+  position: absolute;
+  width: 400px;
+  height: 250px;
+  border: 2px solid black;
+  top: 360px;
+  left: 150px;
+  text-align: center;
+}
+
+body .roadmap .roadmap-inner .roadmap-body #q3-2022 .roadmapdate{
+  font-size: 30px;
+  margin: 15px auto auto auto;
+  border: 2px solid black;
+}
+
+body .roadmap .roadmap-inner .roadmap-body #q3-2022 .roadmapdescription {
+  margin: 10px;
+  font-size: 20px;
+  font-style: italic;
+  line-height: 40px;
+  text-align: left;
+}
+
+/* 2022 q4 */
+body .roadmap .roadmap-inner .roadmap-body #q4-2022 {
+  position: absolute;
+  width: 400px;
+  height: 250px;
+  border: 2px solid black;
+  top: 450px;
+  right: 150px;
+  text-align: center;
+}
+
+body .roadmap .roadmap-inner .roadmap-body #q4-2022 .roadmapdate{
+  font-size: 30px;
+  margin: 15px auto auto auto;
+  border: 2px solid black;
+}
+
+body .roadmap .roadmap-inner .roadmap-body #q4-2022 .roadmapdescription {
+  margin: 10px;
+  font-size: 20px;
+  font-style: italic;
+  line-height: 40px;
+  text-align: left;
+}
+
+/* join us */
+body .join-us {
+  height: 1000px;
+  background-color: rgb(226, 141, 226);
+  margin-top: 100px;
+}
+
+body .join-us .join-us-inner {
+  width: 1300px;
+  height: 1000px;
+  background-color: rgb(157, 192, 157);
+  margin: auto;
+  position: relative;
+  margin: auto;
+}
+
+body .join-us .join-us-inner .join-us-big-message {
+  position: absolute;
+  background-color: skyblue;
+  font-size: 68px;
+  margin: 0 70px 70px 70px;
+  font-weight: bold;
+  line-height: 55px;
+  right: 0;
+  left: 0;
+}
+
+body .join-us .join-us-inner .current-matters {
+  margin: 300px 0 0 10px;
+  position: absolute;
+  display: flex;
+}
+
+body .join-us .join-us-inner .current-matters .current-matters-ul .question-making {
+  background-color: skyblue;
+  font-size: 36px;
+}
+
+body .join-us .join-us-inner .current-matters .current-matters-ul .current-matters-list {
+  font-size: 28px;
+  margin: 5px auto;
+  color: silver;
+  background-color: #fff;
+}
+
+body .join-us .join-us-inner .current-matters .current-matters-litepaper {
+  background-color: orange;
+  text-align: center;
+  font-size: 30px;  
+  position: relative; 
+  margin-left: 20px;
+  width: 600px;
+
+}
+
+body .join-us .join-us-inner .current-matters .current-matters-litepaper p {
+  border: 2px solid black;
+  margin-top: 15px;
+  color: rgb(114, 113, 113);
+}
+
+
+body .join-us .join-us-inner .current-matters .current-matters-litepaper a {
+  display: block;
+  background-color: orange;
+  font-size: 40px;  
+  border: 2px solid black;
+  padding: 5px;
+  position: absolute;
+  right: 0;
+  left: 0;
+  margin: 23px auto;
+}
+
+/* HOW TO SOLVE */
+
+body .join-us .join-us-inner .how-to-solve-as-community {
+  border: 2px solid black;
+  position: absolute;
+  margin: 520px 0 0 10px;
+
+}
+
+body .join-us .join-us-inner .how-to-solve-as-community {
+  margin: 510px 10px 0 10px;
+  position: absolute;
+  display: flex;
+}
+
+
+
+body .join-us .join-us-inner .how-to-solve-as-community .how-to-solve-ul .question-making {
+  background-color: skyblue;
+  font-size: 36px;
+}
+
+body .join-us .join-us-inner .how-to-solve-as-community .how-to-solve-ul .how-to-solve-list {
+  background-color: #fff;
+  font-size: 28px;
+  margin: 5px auto;
+  color: silver;
+
+}
+
+
+
+
+body .join-us .join-us-inner .how-to-solve-as-community .how-to-solve-discord {
+  background-color: orange;
+  text-align: center;
+  font-size: 30px;  
+  position: relative; 
+  margin-right: 20px;
+  width: 600px;
+
+
+}
+
+body .join-us .join-us-inner .how-to-solve-as-community .how-to-solve-discord p {
+  border: 2px solid black;
+  margin-top: 15px;
+  color: rgb(114, 113, 113);
+}
+
+body .join-us .join-us-inner .how-to-solve-as-community .how-to-solve-discord a {
+  display: block;
+  background-color: orange;
+  font-size: 40px;  
+  border: 2px solid black;
+  padding: 5px;
+  position: absolute;
+  right: 0;
+  left: 0;
+  margin: 35px auto;
+}
+
+/* AS ARTISTS AND DEVELOPERS */
+body .join-us .join-us-inner .how-to-solve-as-artists-devs {
+  margin: 765px 0 0 10px;
+  position: absolute;
+  display: flex;
+}
+
+body .join-us .join-us-inner .how-to-solve-as-artists-devs .how-to-solve-as-artists-devs-ul .question-making {
+  background-color: skyblue;
+  font-size: 36px;
+}
+
+body .join-us .join-us-inner .how-to-solve-as-artists-devs .how-to-solve-as-artists-devs-ul .how-to-solve-as-artists-devs-list {
+  background-color: white;
+  font-size: 28px;
+  margin: 5px auto;
+  color: silver;
+}
+
+body .join-us .join-us-inner .how-to-solve-as-artists-devs .how-to-solve-as-artists-devs-google-form {
+  background-color: orange;
+  width: 600px;
+  text-align: center;
+  font-size: 30px;  
+  position: relative; 
+  margin-left: 20px;
+}
+
+body .join-us .join-us-inner .how-to-solve-as-artists-devs .how-to-solve-as-artists-devs-google-form p {
+  border: 2px solid black;
+  margin-top: 15px;
+  color: rgb(114, 113, 113);
+}
+
+
+body .join-us .join-us-inner .how-to-solve-as-artists-devs .how-to-solve-as-artists-devs-google-form a {
+  display: block;
+  font-size: 40px;  
+  border: 2px solid black;
+  padding: 5px;
+  position: absolute;
+  right: 0;
+  left: 0;
+  margin: 20px auto;
+}
+/* 
+body .waitlist-section {
+  width: 1300px;
+  height: 300px;
+  background-color: yellow;
+  margin: auto;
+  position: relative;
+}
+body .waitlist-section .waitlist-box {
+  width: 1000px;
+  height: 150px;
+  background-color: skyblue;
+  right: 0;
+  left: 0;
+  margin: 30px auto auto auto;
+  position: absolute;
+} */
+
+body .footer {
+  display: flex;
+  width: 1300px;
+  height: 600px;
+  background-color: yellow;
+  margin: auto;
+  position: relative;
+  justify-content: center;
+}
+
+body .footer .footerlogo {
+  width: auto;
+  height: auto;
+  background-color: skyblue;
+  position:absolute;
+  margin-top:230px;
+}
+
+body .footer .footerlogo img {
+  background-color: black;
+  width: 400px;
+  padding: 20px;
+}
+
+body .footer ul {
+  background-color: pink;
+  display: flex;
+  height: 50px;
+  align-items: center;
+  margin-top: 400px;
+}
+
+body .footer ul .footerlink {
+  background-color: plum;
+  /* margin: 10px; */
+  font-size: 22px;
+  position: relative;
+  display: flex;
+}
+
+body .footer ul .footerlink::before {
+  display: block;
+  content: "";
+  width: 1.5px;
+  height: 20px;
+  background-color: black;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  left: 0;
+}
+
+body .footer ul .footerlink:first-child::before {
+  display: none;
+}
+
+body .footer ul .footerlink a .desc {
+  padding: 10px 20px;
+  margin: 10px;
+}
